@@ -17,6 +17,7 @@ if(typeof(ovice) != "undefined"){
   if(prof){
     console.log(prof.badge);
     const index = badgeList.indexOf(prof.badge);
+    console.log(index);
     if(index >= 0){
       if(index != 10){
         ovice.setProfile({badge:badgeList[index + 1]});
