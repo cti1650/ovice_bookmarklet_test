@@ -1,1 +1,9 @@
 
+.test_panel {
+  position: fixed;
+  top:0px;
+  left:0px;
+  margin:20px;
+  padding:30px;
+  background:#FF0000;
+}
