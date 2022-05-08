@@ -13,12 +13,12 @@
         data.getChatMessage = () => {
               messageList = [];
               document.querySelectorAll('div#chat-scroll > div').forEach((el) => {
-                const data = {
+                const messageData = {
                     name: el?.querySelector('.name')?.textContent || data?.getUserName || '',
                     message: el?.querySelector('.break-space')?.textContent.trim() || '',
                     time: el?.querySelector('.time-message')?.textContent.trim() || ''
                 };
-                messageList.push(data);
+                messageList.push(messageData);
               });
               return messageList;
         };
