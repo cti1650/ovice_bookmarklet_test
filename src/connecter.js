@@ -14,9 +14,9 @@
               messageList = [];
               document.querySelectorAll('div#chat-scroll > div').forEach((el) => {
                 const data = {
-                    name: el?.querySelector('.name')?.textContent || '',
-                    message: el?.querySelector('.break-space')?.textContent.trim() || '',
-                    time: el?.querySelector('.time-message')?.textContent.trim() || ''
+                    name: el?.querySelector('.name')?.textContent || data?.getUserName ?? '',
+                    message: el?.querySelector('.break-space')?.textContent.trim() ?? '',
+                    time: el?.querySelector('.time-message')?.textContent.trim() ?? ''
                 };
                 messageList.push(data);
               });
