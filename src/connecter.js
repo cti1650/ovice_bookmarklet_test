@@ -112,5 +112,5 @@
         };
         return data;
     };
-    global.oviceConnecter = oviceConnecterClass();
+    global.oviceConnecter = oviceConnecterClass;
 })(window);
