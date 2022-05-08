@@ -3,6 +3,7 @@
         let data = {
             getTitle: document.title,
             getUrl: document.URL,
+            getUserName: document?.getElementById('UserName')?.value || 'anonymous',
             getNewChatMessage: Number(document?.querySelector('div#chat-button > span.counter')?.textContent),
             hasLogout: !!document?.querySelector('#leave-openspace-block'),
             hasOpenspace: !!document?.querySelector('#leave-room-block'),
