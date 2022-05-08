@@ -1,10 +1,10 @@
 ((global)=>{
     const oviceConnecterClass = () => {
         let data = {
-            ovice_tab_title: document.title,
-            ovice_has_logout: !!document?.querySelector('#leave-openspace-block'),
-            ovice_has_openspace: !!document?.querySelector('#leave-room-block'),
-            ovice_has_coffee: !!document?.querySelector('#away-block'),
+            getTitle: ()=>document.title,
+            hasLogout: ()=>!!document?.querySelector('#leave-openspace-block'),
+            hasOpenspace: ()=>!!document?.querySelector('#leave-room-block'),
+            hasCoffee: ()=>!!document?.querySelector('#away-block'),
         }
         const screenshare_ele = document?.querySelector('#screenshare-block > div')
         if (screenshare_ele) {
