@@ -1,5 +1,5 @@
 ((global)=>{
-    global.oviceConnecter = () => {
+    const oviceConnecterClass = () => {
         let data = {
             ovice_tab_title: document.title,
             ovice_has_logout: !!document?.querySelector('#leave-openspace-block'),
@@ -53,4 +53,5 @@
         }
         return data;
     };
+    global.oviceConnecter = oviceConnecterClass();
 })(window);
