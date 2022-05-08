@@ -1,7 +1,7 @@
 ((global)=>{
     const oviceConnecterClass = () => {
         let data = {
-            getTitle: document.title,
+            getTitle: document.title.replace(' | oVice',''),
             getUrl: document.URL,
             getUserName: document?.getElementById('userName')?.value ?? 'anonymous',
             getNewChatMessage: Number(document?.querySelector('div#chat-button > span.counter')?.textContent),
