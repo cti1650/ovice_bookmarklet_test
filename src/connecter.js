@@ -9,6 +9,18 @@
             hasLeave: !!document?.querySelector('#leave-openspace-block') || !!document?.querySelector('#leave-room-block'),
             hasCoffee: !!document?.querySelector('#away-block'),
         }
+        data.getChatMessage = () => {
+              messageList = [];
+              document.querySelectorAll('div#chat-scroll > div').forEach((el) => {
+                const data = {
+                    name: el?.querySelector('.name')?.textContent || '',
+                    message: el?.querySelector('.break-space')?.textContent.trim() || '',
+                    time: el?.querySelector('.time-message')?.textContent.trim() || ''
+                };
+                messageList.push(data);
+              });
+              return messageList;
+        };
         const screenshare_ele = document?.querySelector('#screenshare-block > div')
         if (screenshare_ele) {
             data = { ...data, ...{
