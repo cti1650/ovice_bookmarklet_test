@@ -5,6 +5,7 @@
             getUrl: ()=>document.URL,
             hasLogout: ()=>!!document?.querySelector('#leave-openspace-block'),
             hasOpenspace: ()=>!!document?.querySelector('#leave-room-block'),
+            hasLeave: ()=>!!document?.querySelector('#leave-openspace-block') || !!document?.querySelector('#leave-room-block'),
             hasCoffee: ()=>!!document?.querySelector('#away-block'),
         }
         const screenshare_ele = document?.querySelector('#screenshare-block > div')
