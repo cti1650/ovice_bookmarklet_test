@@ -2,6 +2,7 @@
     const oviceConnecterClass = () => {
         let data = {
             getTitle: ()=>document.title,
+            getUrl: ()=>document.URL,
             hasLogout: ()=>!!document?.querySelector('#leave-openspace-block'),
             hasOpenspace: ()=>!!document?.querySelector('#leave-room-block'),
             hasCoffee: ()=>!!document?.querySelector('#away-block'),
