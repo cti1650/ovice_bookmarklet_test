@@ -1,10 +1,10 @@
 ((global)=>{
     const oviceConnecterClass = () => {
         let data = {
-            getTitle: document.title.replace(' | oVice',''),
-            getUrl: document.URL,
-            getUserName: document?.getElementById('userName')?.value ?? 'anonymous',
-            getNewChatMessage: Number(document?.querySelector('div#chat-button > span.counter')?.textContent),
+            title: document.title.replace(' | oVice',''),
+            url: document.URL,
+            userName: document?.getElementById('userName')?.value ?? 'anonymous',
+            newChatMessageCount: Number(document?.querySelector('div#chat-button > span.counter')?.textContent),
             hasLogout: !!document?.querySelector('#leave-openspace-block'),
             hasOpenspace: !!document?.querySelector('#leave-room-block'),
             hasLeave: !!document?.querySelector('#leave-openspace-block') || !!document?.querySelector('#leave-room-block'),
@@ -14,7 +14,7 @@
               messageList = [];
               document.querySelectorAll('div#chat-scroll > div').forEach((el) => {
                 const messageData = {
-                    name: el?.querySelector('.name')?.textContent || data?.getUserName || '',
+                    name: el?.querySelector('.name')?.textContent || data?.userName || '',
                     message: el?.querySelector('.break-space')?.textContent.trim() || '',
                     time: el?.querySelector('.time-message')?.textContent.trim() || ''
                 };
