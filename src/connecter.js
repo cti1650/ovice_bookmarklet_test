@@ -3,6 +3,7 @@
         let data = {
             getTitle: document.title,
             getUrl: document.URL,
+            getNewChatMessage: Number(document?.querySelector('div#chat-button > span.counter')?.textContent),
             hasLogout: !!document?.querySelector('#leave-openspace-block'),
             hasOpenspace: !!document?.querySelector('#leave-room-block'),
             hasLeave: !!document?.querySelector('#leave-openspace-block') || !!document?.querySelector('#leave-room-block'),
