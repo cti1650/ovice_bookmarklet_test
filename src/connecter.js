@@ -51,6 +51,65 @@
                 }}
             }
         }
+        data.leave = () => {
+            const ele = document?.querySelector(
+                '#leave-openspace-block'
+            )
+            if (ele) {
+                ele['click']()
+            }
+            const ele2 =
+                document?.querySelector(
+                    '#leave-room-block'
+                )
+            if (ele2) {
+                ele2['click']()
+            }
+        };
+        data.rest = () => {
+            const ele =
+                document?.querySelector('#away-block')
+            if (ele) {
+                ele['click']()
+            }
+        };
+        data.screenShare = () => {
+            const ele = document?.querySelector(
+                '#screenshare-block > div'
+            )
+            if (ele) {
+                ele['click']()
+            } else {
+                const eleList = document?.querySelectorAll(
+                    '.dynamic-object-element'
+                )
+                if (eleList) {
+                    eleList.forEach((ele) => {
+                        if (ele?.querySelector('img')) {
+                            if (
+                                [
+                                    ...ele?.querySelectorAll(
+                                        'img'
+                                    ),
+                                ].filter((item) =>
+                                    item?.['src']?.includes(
+                                        'screenshare'
+                                    )
+                                ).length !== 0
+                            ) {
+                                ele['click']()
+                            }
+                        }
+                    })
+                }
+            }
+        };
+        data.mic = () => {
+            const ele = document?.querySelector('#mic-block > div')
+            if (ele) {
+                ele['click']()
+            }
+        };
         return data;
     };
     global.oviceConnecter = oviceConnecterClass();
