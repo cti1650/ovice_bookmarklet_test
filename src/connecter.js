@@ -33,18 +33,14 @@
         } else {
             const eleList = document?.querySelectorAll('.dynamic-object-element')
             if (eleList) {
-                eleList.forEach((ele) => {
-                    if (!ele) return
-                    if (
-                        ele?.querySelector('img')?.['src']?.includes('screenshare')
-                    ) {
-                        data = { ...data,...{
-                            hasScreenshare: true,
-                            screenshareState:
-                                !!ele?.querySelector('i.bar-device-on'),
-                        }}
-                    }
+                const optionMenu = [...eleList].filter((ele) => {
+                    return ele?.querySelector('img')?.['src']?.includes('screenshare');
                 })
+                data = { ...data,...{
+                    hasScreenshare: !!optionMenu.length,
+                    screenshareState:
+                        !!optionMenu?.[0]?.querySelector('i.bar-device-on'),
+                }}
             } else {
                 data = { ...data,...{
                     hasScreenshare: false,
