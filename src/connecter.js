@@ -62,6 +62,14 @@
                     micState: true,
                 }}
             }
+        }else{
+            const mic_ele = document?.querySelector('button[aria-label=microphone]')
+            if (mic_ele) {
+                data = { ...data,...{
+                    hasMic: true,
+                    micState: mic_ele.getAttribute("data-status") || false,
+                }}
+            }
         }
         data.leave = () => {
             const ele = document?.querySelector(
