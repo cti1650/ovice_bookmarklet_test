@@ -67,7 +67,7 @@
             if (mic_ele) {
                 data = { ...data,...{
                     hasMic: true,
-                    micState: mic_ele.getAttribute("data-status") || false,
+                    micState: !!mic_ele.getAttribute("data-status") || false,
                 }}
             }
         }
