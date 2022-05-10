@@ -66,16 +66,11 @@
         data.leave = () => {
             const ele = document?.querySelector(
                 '#leave-openspace-block'
-            )
+            ) || document?.querySelector(
+                    '#leave-room-block'
+                ) || document?.querySelector('#away-block')
             if (ele) {
                 ele['click']()
-            }
-            const ele2 =
-                document?.querySelector(
-                    '#leave-room-block'
-                )
-            if (ele2) {
-                ele2['click']()
             }
         };
         data.rest = () => {
