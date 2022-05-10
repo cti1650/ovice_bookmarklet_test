@@ -117,7 +117,7 @@
             }
         };
         data.mic = () => {
-            const ele = document?.querySelector('#mic-block > div')
+            const ele = document?.querySelector('#mic-block > div') || document?.querySelector('button[aria-label=microphone]')
             if (ele) {
                 ele['click']()
             }
