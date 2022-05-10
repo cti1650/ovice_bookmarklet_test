@@ -68,7 +68,7 @@
                 '#leave-openspace-block'
             ) || document?.querySelector(
                     '#leave-room-block'
-                ) || document?.querySelector('#away-block')
+                ) || document?.querySelector('.MuiBox-root > button.MuiIconButton-root.MuiIconButton-colorInfo:last-child') || document?.querySelector('#away-block')
             if (ele) {
                 ele['click']()
             }
